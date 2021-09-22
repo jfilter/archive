@@ -1,0 +1,41 @@
+			body {
+				text-align: center;
+				word-wrap: break-word;
+				font-family: 'Vollkorn', serif;
+			}
+
+			svg {
+				/*border: solid black 1px;*/
+				/*background-color: #ebf3fa;*/
+			}
+
+			p {
+				font-size: 0.5em;
+				color: black;
+			}
+
+			.tooltip {
+				background-color: white;
+				/*padding: 0.1em;*/
+			}
+
+			.hexagon {
+				font-family: 'Helvetica Neue', sans-serif;
+				color: black;
+			}
+
+			td {
+				padding: 0 1em;
+			}
+
+			.hexagon-label {
+				font-size: 0.5em;
+			}
+
+			.hexagon-label > div {
+			  display: flex;
+			  flex-direction: column;
+			  justify-content: center;
+			}
+
+
