@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+ 		<link rel="stylesheet" type="text/css" href="all.min.css">
+ 		<link rel="stylesheet" type="text/css" href="bower_components/cartodb.js/themes/css/cartodb.css">
+
+	<title>Welche Gemeinden verlieren? - Gerichtsstrukturreform Mecklenburg-Vorpommern</title>
+	<meta name="description" content="Wie verändern sich die Fahrzeiten durch die Reform? Die Karte gibt einen Überblick." />
+
+	<!-- Twitter Card data -->
+	<meta name="twitter:card" value="summary">
+	<meta name="twitter:creator" content="@fil_ter">
+
+
+	<!-- Open Graph data -->
+	<meta property="og:title" content="Welche Gemeinden verlieren? - Gerichtsstrukturreform Mecklenburg-Vorpommern" />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content="http://vis.one/gerichtsstrukturreform/" />
+	<meta property="og:image" content="http://vis.one/gerichtsstrukturreform/preview.png" />
+	<meta property="og:description" content="Wie verändern sich die Fahrzeiten durch die Reform? Eine Karte gibt einen Überblick." />
+	<meta property="article:author" content="https://www.facebook.com/filter0" />
+
+
+  </head>
+  <body>
+  	<div class="container">
+  		<div class="row">
+				<div class="page-header col-md-4 col-md-offset-4 text-center">
+			  	<h1>Gerichtsreform in Meck-Pomm<br><small>Welche Gemeinden verlieren?</small></h1>
+			  	von Johannes Filter, 24. August 2015
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-md-offset-4">
+					<p>In Mecklenburg-Vopommern wird zur Zeit die Anzahl der Amtsgerichte von 21 auf 10 reduziert. Damit verbunden ist eine Veränderung der Einzugsgebiete. Am 6. September gibt es einen Volksentscheid, um diese Reform zu stoppen. Kritiker befürchten, dass sich Wege und Fahrzeiten unzumutbar erhöhen. Höchste Zeit, sich die Fahrzeiten genauer anzusehen. Die nachfolgende Karte zeigt die Veränderung der Fahrzeit durch die Reform.</p>
+				</div>
+			</div>
+			<div class="row">
+				<h2 class="text-center">Veränderung der Fahrzeit<br>durch die Reform</h2>
+			</div>	
+			<div class="row map" id="map1"></div>
+			<div class="row">
+				<div class="col-md-4 col-md-offset-4">
+					<br>
+					In vielen Gemeinden gibt es keine Änderung, jedoch gibt es auch einige Gewinner. Zum Beispiel in Wittenförden profitiert man davon, nicht mehr nach Ludwigslust fahren zu müssen, sondern zum naheliegenden Schwerin.
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-md-offset-4" id="chart-width">
+						<h2 class="text-center">Die Gewinner</h2>
+						<svg class="chart-pos"></svg>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-md-offset-4">
+					<br>
+					In den meisten Gemeinden verschlechtert sich die Lage. Zum Beispiel in Kommunen, in denen es vorher ein Amtsgericht gab, wie Demmin oder Anklam, steigt die Fahrzeit erheblich. Aber auch andere, abgeschlagene Orte verlieren.
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-md-offset-4">
+						<h2 class="text-center">Die Verlierer</h2>
+						<svg class="chart-neg"></svg>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 col-md-offset-4">
+					<br>
+					 Nachfolgend gibt es noch jeweils eine Karte mit den Fahrzeiten vor und nach der Reform. Die zugehörigen Amtsgerichte sind ebenso vermerkt.
+				</div>
+			</div>
+			<div class="row">
+				<h2 class="text-center">Vor der Reform</h2>
+			</div>			
+			<div class="row map" id="map2"></div>
+			<div class="row">
+				<h2 class="text-center">Nach der Reform</h2>
+			</div>
+			<div class="row map" id="map3"></div>
+			<div class="row">
+				<div class="col-md-4 col-md-offset-4">
+					<p>Durch die Reform werden Fahrzeiten von über einer Stunde normal. Manche sehen darin noch keinen Zusammenbruch des Rechtsstaates. Aber die Entwicklung wirkt durchaus bedrohlich. Der Staat zieht sich aus der Fläche zurück. Wo wird das enden? Wo führt das hin? Fragen, die die regierende Politik - und am 6. September auch die Bürger - beantworten müssen. ■
+					<hr>
+					<div class="fb-share-button pull-left" data-href="http://vis.one/gerichtsstrukturreform/" data-layout="button_count"></div>
+					<div class="pull-right">
+						<a href="https://twitter.com/share" class="twitter-share-button" data-via="fil_ter">Tweet</a>
+					</div>
+					<div class="clearfix"></div>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+					<hr>
+					<small>Für die Berechnungen wurde vernachlässigt, dass sechs sogenannte "Zweigstellen" eingeführt werden. In einzelnen, speziellen Fällen sind diese auch für Rechtsanliegen zuständig. Weil sie aber keine eigenständigen Gerichte sind, spielen sie nur eine untergeordnete Rolle. Mehr Informatinen gibt es auf den <a target="_blank" href="http://www.regierung-mv.de/cms2/Regierungsportal_prod/Regierungsportal/de/jm/Themen/Gerichtsstrukturreform/index.jsp">Webseiten der Regierung</a>. <br><br>Mehr Informationen zum Volksentscheid gibt es bei <a target="_blank" href="https://de.wikipedia.org/wiki/Volksentscheid_%C3%BCber_die_Gerichtsstrukturreform_in_Mecklenburg-Vorpommern">Wikipedia</a> und den <a target="_blank" href="http://gerichtsstruktur-mv.de/">Initiatoren des Volksbegehrens</a>.</small></p>
+					<hr>
+					<p class="text-center"><small>Kontakt: <a target="_blank" href="http://johannesfilter.com">Johannes Filter</a><br><br>
+						
+						This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+
+						<br><br>
+						Kartenmaterial: <a href="http://www.laiv-mv.de/land-mv/LAiV_prod/LAiV/AfGVK/Landschaftsdaten/Verwaltungsgrenzen/index.jsp" target="_blank">GeoBasis-DE/M-V; CC-BY-SA 3.0</a></small></p>
+
+						<br><br>
+
+						<small class="text-center"><div class="text-center"><button class="btn" type="button" data-toggle="collapse" data-target="#ds" aria-expanded="false" aria-controls="ds">
+  						Datenschutzerklärung
+						</button></div></small>
+						<br>
+						<div class="collapse" id="ds">
+							<p><strong>Datenschutzerklärung</strong></p><p><strong>Geltungsbereich</strong></p><p>Diese Datenschutzerklärung klärt Nutzer über die Art, den Umfang und Zwecke der Erhebung und Verwendung personenbezogener Daten durch den verantwortlichen Anbieter Johannes Filter, hi( at )jfilter.de auf dieser Website (im folgenden “Angebot”) auf.<br />
+							<br />
+							Die rechtlichen Grundlagen des Datenschutzes finden sich im Bundesdatenschutzgesetz (BDSG) und dem Telemediengesetz (TMG).<br />
+							<br />
+							</p><p><strong>Zugriffsdaten/ Server-Logfiles</strong></p><p><span class="sd-muster-content">Der Anbieter (beziehungsweise sein Webspace-Provider) erhebt Daten über jeden Zugriff auf das Angebot (so genannte Serverlogfiles). Zu den Zugriffsdaten gehören:<br />
+							<br />
+							Name der abgerufenen Webseite, Datei, Datum und Uhrzeit des Abrufs, übertragene Datenmenge, Meldung über erfolgreichen Abruf, Browsertyp nebst Version, das Betriebssystem des Nutzers, Referrer URL (die zuvor besuchte Seite), IP-Adresse und der anfragende Provider.<br />
+							<br />
+							Der Anbieter verwendet die Protokolldaten nur für statistische Auswertungen zum Zweck des Betriebs, der Sicherheit und der Optimierung des Angebotes. Der Anbieterbehält sich jedoch vor, die Protokolldaten nachträglich zu überprüfen, wenn aufgrund konkreter Anhaltspunkte der berechtigte Verdacht einer rechtswidrigen Nutzung besteht.</span></p><p><strong>Einbindung von Diensten und Inhalten Dritter</strong></p><p><span class="sd-muster-content">Es kann vorkommen, dass innerhalb dieses Onlineangebotes Inhalte Dritter, wie zum Beispiel Videos von YouTube, Kartenmaterial von Google-Maps, RSS-Feeds oder Grafiken von anderen Webseiten eingebunden werden. Dies setzt immer voraus, dass die Anbieter dieser Inhalte (nachfolgend bezeichnet als "Dritt-Anbieter") die IP-Adresse der Nutzer wahr nehmen. Denn ohne die IP-Adresse, könnten sie die Inhalte nicht an den Browser des jeweiligen Nutzers senden. Die IP-Adresse ist damit für die Darstellung dieser Inhalte erforderlich. Wir bemühen uns nur solche Inhalte zu verwenden, deren jeweilige Anbieter die IP-Adresse lediglich zur Auslieferung der Inhalte verwenden. Jedoch  haben wir keinen Einfluss darauf, falls die Dritt-Anbieter die IP-Adresse z.B. für statistische Zwecke speichern. Soweit dies uns bekannt ist, klären wir die Nutzer darüber auf.<br />
+							</span></p><p><strong>Google Analytics</strong></p><p><span class="sd-muster-content">Dieses Angebot benutzt Google Analytics, einen Webanalysedienst der Google Inc. („Google“). Google Analytics verwendet sog. „Cookies“, Textdateien, die auf Computer der Nutzer gespeichert werden und die eine Analyse der Benutzung der Website durch sie ermöglichen. Die durch den Cookie erzeugten Informationen über Benutzung dieser Website durch die Nutzer werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert.<br />
+							<br />
+							Im Falle der Aktivierung der IP-Anonymisierung auf dieser Webseite, wird die IP-Adresse der Nutzer von Google jedoch innerhalb von Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt. Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. Die IP-Anonymisierung ist auf dieser Website aktiv. Im Auftrag des Betreibers dieser Website wird Google diese Informationen benutzen, um die Nutzung der Website durch die Nutzer auszuwerten, um Reports über die Websiteaktivitäten zusammenzustellen und um weitere mit der Websitenutzung und der Internetnutzung verbundene Dienstleistungen gegenüber dem Websitebetreiber zu erbringen.<br />
+							<br />
+							Die im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen Daten von Google zusammengeführt. Die Nutzer können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; Dieses Angebot weist die Nutzer jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser Website vollumfänglich werden nutzen können. Die Nutzer können darüber hinaus die Erfassung der durch das Cookie erzeugten und auf ihre Nutzung der Website bezogenen Daten (inkl. Ihrer IP-Adresse) an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem sie das unter dem folgenden Link verfügbare Browser-Plugin herunterladen und installieren:  <a href="http://tools.google.com/dlpage/gaoptout?hl=de" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://tools.google.com/dlpage/gaoptout?hl=de', 'http://tools.google.com/dlpage/gaoptout?hl=de']);" >http://tools.google.com/dlpage/gaoptout?hl=de</a>.<br />
+							<br />
+							Alternativ zum Browser-Add-On oder innerhalb von Browsern auf mobilen Geräten, <a id="GAOptOut" title="Google Analytics Opt-Out-Cookie setzen" href="javascript:gaOptout()">klicken Sie bitte diesen Link</a>, um die Erfassung durch Google Analytics innerhalb dieser Website zukünftig zu verhindern. Dabei wird ein Opt-Out-Cookie auf Ihrem Gerät abgelegt. Löschen Sie Ihre Cookies, müssen Sie diesen Link erneut klicken.<br />
+							</span></p><p><strong>Verwendung von Facebook Social Plugins</strong></p><p><span class="sd-muster-content">Dieses Angebot verwendet Social Plugins ("Plugins")  des sozialen Netzwerkes facebook.com, welches von der Facebook Inc., 1 Hacker Way, Menlo Park, CA 94025, USA betrieben wird ("Facebook"). Die Plugins sind an einem der Facebook Logos erkennbar (weißes „f“ auf blauer Kachel, den Begriffen "Like", "Gefällt mir" oder einem „Daumen hoch“-Zeichen) oder sind mit dem Zusatz "Facebook Social Plugin" gekennzeichnet. Die Liste und das Aussehen der Facebook Social Plugins kann hier eingesehen werden: <a href="https://developers.facebook.com/docs/plugins/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://developers.facebook.com/docs/plugins/', 'https://developers.facebook.com/docs/plugins/']);" >https://developers.facebook.com/docs/plugins/</a>.<br />
+							<br />
+							Wenn ein Nutzer eine Webseite dieses Angebots aufruft, die ein solches Plugin enthält, baut sein Browser eine direkte Verbindung mit den Servern von Facebook auf. Der Inhalt des Plugins wird von Facebook direkt an Ihren Browser übermittelt und von diesem in die Webseite eingebunden. Der Anbieter hat daher keinen Einfluss auf den Umfang der Daten, die Facebook mit Hilfe dieses Plugins erhebt und informiert die Nutzer daher entsprechend seinem <a href="http://www.facebook.com/help/?faq=17512" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'http://www.facebook.com/help/?faq=17512', 'Kenntnisstand']);" >Kenntnisstand</a>:<br />
+							<br />
+							Durch die Einbindung der Plugins erhält Facebook die Information, dass ein Nutzer die entsprechende Seite des Angebots aufgerufen hat. Ist der Nutzer bei Facebook eingeloggt, kann Facebook den Besuch seinem Facebook-Konto zuordnen. Wenn Nutzer mit den Plugins interagieren, zum Beispiel den Like Button betätigen oder einen Kommentar abgeben, wird die entsprechende Information von Ihrem Browser direkt an Facebook übermittelt und dort gespeichert. Falls ein Nutzer kein Mitglied von Facebook ist, besteht trotzdem die Möglichkeit, dass Facebook seine IP-Adresse in Erfahrung bringt und speichert. Laut Facebook wird in Deutschland nur eine anonymisierte IP-Adresse gespeichert.<br />
+							<br />
+							Zweck und Umfang der Datenerhebung und die weitere Verarbeitung und Nutzung der Daten durch Facebook sowie die diesbezüglichen Rechte und Einstellungsmöglichkeiten zum Schutz der Privatsphäre der Nutzer , können diese den Datenschutzhinweisen von Facebook entnehmen: <a href="https://www.facebook.com/about/privacy/" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://www.facebook.com/about/privacy/', 'https://www.facebook.com/about/privacy/']);" >https://www.facebook.com/about/privacy/</a>.<br />
+							<br />
+							Wenn ein Nutzer Facebookmitglied ist und nicht möchte, dass Facebook über dieses Angebot Daten über ihn sammelt und mit seinen bei Facebook gespeicherten Mitgliedsdaten verknüpft, muss er sich vor dem  Besuch des Internetauftritts bei Facebook ausloggen.</span></p><p><strong>Twitter</strong></p><p><span class="sd-muster-content">Dieses Angebot nutzt die <a href="https://twitter.com/about/resources/buttons" onclick="_gaq.push(['_trackEvent', 'outbound-article', 'https://twitter.com/about/resources/buttons', 'Schaltflächen des Dienstes Twitter']);" >Schaltflächen des Dienstes Twitter</a>. Diese Schaltflächen werden angeboten durch die Twitter Inc., 795 Folsom St., Suite 600, San Francisco, CA 94107, USA. Sie sind an Begriffen wie "Twitter" oder "Folge", verbunden mit einem stillisierten blauen Vogel erkennbar. Mit Hilfe der Schaltflächen ist es möglich einen Beitrag oder Seite dieses Angebotes bei Twitter zu teilen oder dem Anbieter bei Twitter zu folgen.<br />
+							<br />
+							Wenn ein Nutzer eine Webseite dieses Internetauftritts aufruft, die einen solchen Button enthält, baut sein Browser eine direkte Verbindung mit den Servern von Twitter auf. Der Inhalt des Twitter-Schaltflächen wird von Twitter direkt an den Browser des Nutzers übermittelt. Der Anbieter hat daher keinen Einfluss auf den Umfang der Daten, die Twitter mit Hilfe dieses Plugins erhebt und informiert die Nutzer entsprechend seinem Kenntnisstand. Nach diesem wird lediglich die IP-Adresse des Nutzers die URL der jeweiligen Webseite beim Bezug des Buttons mit übermittelt, aber nicht für andere Zwecke, als die Darstellung des Buttons, genutzt.<br />
+							Weitere Informationen hierzu finden sich in der Datenschutzerklärung von Twitter unter http://twitter.com/privacy.</span></p><p><strong>Widerruf, Änderungen, Berichtigungen und Aktualisierungen</strong></p><p>Der Nutzer hat das Recht, auf Antrag unentgeltlich Auskunft zu erhalten über die personenbezogenen Daten, die über ihn gespeichert wurden. Zusätzlich hat der Nutzer das Recht auf Berichtigung unrichtiger Daten, Sperrung und Löschung seiner personenbezogenen Daten, soweit dem keine gesetzliche Aufbewahrungspflicht entgegensteht.<br />
+							</p><p><a href="http://rechtsanwalt-schwenke.de/smmr-buch/datenschutz-muster-generator-fuer-webseiten-blogs-und-social-media/"><strong>Datenschutz-Muster von Rechtsanwalt Thomas Schwenke - I LAW it</strong></a></p>							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="all.min.js"></script>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-48165510-3', 'auto');
+		  ga('set', 'anonymizeIp', true);
+		  ga('send', 'pageview');
+		</script>
+
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+  </body>
+</html>
