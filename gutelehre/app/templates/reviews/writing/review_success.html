@@ -1,0 +1,19 @@
+{% extends "reviews/writing/base_writing.html" %}
+
+
+{% block review_writing %}
+{{super()}}
+
+<div class="review">
+	<h2 class="red">Danke für deine Bewertung</h2>
+	<br>
+	Wir werden sie so schnell es geht veröffentlichen.<br>
+
+	Du hast noch Bock? <br>
+	<a class="blue" href="{{url_for('reviews.writing_choose_uni')}}">Dann bewerte eine weitere Lehrveranstaltung!</a>
+	
+
+</div>
+
+{% endblock review_writing %}
+

@@ -1,0 +1,38 @@
+{% extends "reviews/reading/base_reading.html" %}
+
+
+{% block review_reading %}
+{{super()}}
+
+
+<div class="review">
+	<h3 class="red">{{uni.name}}</h3>
+	<form action="{{url_for('reviews.reading_choose_uni')}}" method="POST">
+		<a href="#" onclick="$(this).closest('form').submit();">
+			Andere Hochschule auswählen
+		</a>
+	</form>
+
+	<h3 class="red">Wähle deine Lehrveranstaltung</h3>
+	<br>
+	{% for c in courses%}
+		<div>
+			<a href="{{url_for('reviews.reading_choose_review', uni_id=uni.id, course_id=c.id) }}">{{c.name}}</a>
+		</div>
+	{% endfor %}
+
+	{% if not courses  %}
+		Es wurden noch keine Lehrveranstaltungen von dieser Hochschule bewertet.
+	{% endif %}
+
+</div>
+
+
+<div style="margin-top: 2em;">
+	<a class="blue" href="{{url_for('reviews.writing_choose_course', uni_id=uni.id)}}">
+		Bewertung schreiben
+	</a>
+</div>
+
+
+{% endblock review_reading %}

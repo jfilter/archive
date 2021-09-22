@@ -1,0 +1,17 @@
+{% extends "reviews/reading/base_reading.html" %}
+
+
+{% block review_reading %}
+{{super()}}
+
+
+<div class="red review">
+	<h3>Wähle deine Hochschule</h3>
+	<br>
+	{% for u in unis%}
+		<div>
+			<a href="{{url_for('reviews.reading_choose_course', uni_id=u.id) }}">{{u.name}}</a>
+		</div>
+	{% endfor %}
+</div>
+{% endblock review_reading %}

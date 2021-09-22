@@ -1,0 +1,72 @@
+{% extends "reviews/reading/base_reading.html" %}
+
+{% block content %}
+{{super()}}
+
+
+<div class="review">
+	<h3 class="red">{{uni.name}}</h3>
+	<form action="{{url_for('reviews.reading_choose_uni')}}" method="POST">
+		<a href="#" onclick="$(this).closest('form').submit();">
+			Andere Hochschule auswählen
+		</a>
+	</form>
+
+	<h3 class="red">{{course.name}}</h3>
+	<form action="{{url_for('reviews.reading_choose_course', uni_id=uni.id)}}" method="POST">
+		<a href="#" onclick="$(this).closest('form').submit();">
+			Andere Lehrveranstaltung auswählen
+		</a>
+	</form>
+
+	<a class="pull_right blue" href="{{url_for('reviews.writing_review', uni_id=uni.id, course_id=course.id)}}"> Bewertung schreiben</a>
+
+	<div class="clear"></div>
+
+	{% if not reviews %}
+		<div class="borders"></div>
+		<p>Es wurder leider noch keine Bewertungen abgegeben.</p>
+	{% endif %}
+
+	{% for rw in reviews%}
+		<div class="text">
+			<div class="borders"></div>
+			<div class="date">{{rw.created_on.strftime('%d.%m.%Y')}}</div>
+			<div class="title">{{rw.title}}</div>
+			<div class="rating">{{rw.semester}}</div>
+			<div class="rating">{{rw.rating}}/5</div>
+
+			{% if rw.teacher %}
+				<div><br>Bei: {{rw.teacher}}<br><br></div>
+			{% endif %}
+
+			<div class="clear pre_text">{% if rw.content|length < 1000 %}<p>{{ rw.content }}</p><br>{% else %}<span id="snippet{{rw.id}}"> {{ rw.content[:1000] }} ... </span><span style="display: none;" id="full{{rw.id}}"> {{ rw.content }} </span>
+					</div>
+					<br>
+					<div class="pull_right blue"><span class="link_like" id="show_text{{rw.id}}"> gesamten Text anzeigen</span>
+
+					<script type="text/javascript">
+						$("#show_text{{rw.id}}").click(function(){
+						  $("#full{{rw.id}}").show();
+						  $("#snippet{{rw.id}}").hide();
+						  $("#show_text{{rw.id}}").hide();
+						});
+					</script>
+
+				{% endif %}
+			</div>
+			<div class="pull_left">
+				<a class="blue" href="{{url_for('reviews.reading_show_review', uni_id=uni.id, course_id=course.id, review_id=rw.id) + '#disqus_thread'}}">Link</a>
+			</div>
+			<div class="clear"></div>
+
+		</div>
+	{% endfor %}
+
+	<div class="borders"></div>
+
+</div>
+
+
+
+{% endblock content %}

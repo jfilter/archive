@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+{{super()}}
+
+
+
+<h1 class="blue review_title">
+	<img src="{{url_for('static', filename='img/reading_no_circle.png')}}" alt="main">
+	<div>Bewertungen ansehen</div>
+</h1>
+
+{% block review_reading %}
+{% endblock review_reading %}
+
+
+{% endblock content %}

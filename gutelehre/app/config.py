@@ -1,0 +1,18 @@
+MEMCACHED_IP = '127.0.0.1:11211'
+
+SECRET_KEY = ''
+WTF_CSRF_SECRET_KEY = ''
+
+MAIL_SERVER = ''
+MAIL_PORT = 587
+MAIL_USE_TLS = True
+MAIL_USE_SSL = False
+MAIL_USERNAME = ''
+MAIL_PASSWORD = ''
+
+
+SQLALCHEMY_DATABASE_URI = 'mysql://root:lollol@localhost/development'
+
+SQLALCHEMY_COMMIT_ON_TEARDOWN = True
+
+

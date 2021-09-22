@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% import "helpers/forms.html" as forms %}
+
+{% block content %}
+{{super()}}
+
+<form action="{{url_for('users.login') }}" method="POST">
+	{{ forms.render(form) }}
+	<p><input type="Submit" value="Login"></p>
+</form>
+
+{% endblock content %}

@@ -1,0 +1,35 @@
+{% extends 'admin/master.html' %}
+{% block body %}
+	<h2>Tickets</h2>
+
+	{% for ticket in tickets %}
+	<div class="well">
+		<h3>
+			ID: {{ticket.id}}
+		</h3>
+		<strong>Created on</strong> {{ticket.created_on.strftime('%d.%m.%Y %H:%M:%S')}}
+
+		<div>
+			<h3>Review</h3>
+			<div><strong>Title</strong> {{ticket.title}}</div>
+			<div><strong>Teacher</strong> {{ticket.teacher}}</div>
+			<div><strong>Rating</strong> {{ticket.rating}}</div>
+			<div><strong>Content</strong> {{ticket.content}}</div>
+		</div>
+
+		<div>
+			<h3>Course</h3>
+				<div><strong>New Course</strong> {{ticket.new_course_name}}</div>
+		</div>
+
+		<br>
+
+		<form target="_blank" action='{{"/admin/ticketsview/approve/" ~ ticket.id ~ "/"}}' method="POST">
+			<button class="btn btn-primary" type="submit">Approve</button>
+		</form>
+
+
+	</div>
+
+	{% endfor %}
+{% endblock %}

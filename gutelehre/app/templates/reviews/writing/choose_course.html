@@ -1,0 +1,46 @@
+{% extends "reviews/writing/base_writing.html" %}
+
+
+{% block review_writing %}
+{{super()}}
+
+
+<div class="review">
+	<h3 class="red">{{uni.name}}</h3>
+	<form action="{{url_for('reviews.writing_choose_uni')}}" method="POST">
+		<a href="#" onclick="$(this).closest('form').submit();">
+			Andere Hochschule auswählen
+		</a>
+	</form>
+
+	<h3 class="red">Wähle deine Lehrveranstaltung</h3>
+	<br>
+
+	{% for c in courses%}
+		<div>
+			<a href="{{url_for('reviews.writing_review', uni_id=uni.id, course_id=c.id) }}">{{c.name}}</a>
+		</div>
+	{% endfor %}
+
+	<br><br>
+	<h3 class="red">Nicht gefunden?</h3>
+	<div class="link_like" onclick="toggleForm();" id="new_course">
+		Füge deine Lehrveranstaltung hinzu!
+	</div>
+
+	<form id="add_new_course" action="{{url_for('reviews.writing_review', uni_id=uni.id, course_id=0) }}" method="GET">
+		<div>Name der Lehrveranstaltung</div>
+		<input name="new_course" type="text">
+		<div>Du wirst weitergeleitet und kannst die Bewertung für deine Lehrveranstaltung verfassen.</div>
+		<div class="text_center">
+			<button type="Submit">HINZUFÜGEN</button>		
+		</div>
+	</form>
+
+
+
+</div>
+
+
+
+{% endblock review_writing %}

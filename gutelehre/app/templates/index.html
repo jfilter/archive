@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div>
+		<img class="front_img pull_left" src="{{url_for('static', filename='img/main_1.png')}}" alt="main">
+		<img class="front_img" src="{{url_for('static', filename='img/main_2.png')}}" alt="main">
+		<img class="front_img pull_right" src="{{url_for('static', filename='img/main_3.png')}}" alt="main">
+		<h1 class="blue clear">Gemeinsam für<br>bessere Bildung</h1>
+		<p class="subtitle">
+			Transparente Lehrveranstaltungsbewertungen von Studierenden für Studierende. Anonym - ohne jede Registrierung.
+		</p>
+
+	<div class="front pull_left">
+		<a href="/Bewertungen">		
+			<img src="{{url_for('static', filename='img/reading_no_circle.png')}}" alt="main">
+			<p>
+				Durchstöbere die eingereichten Bewertungen und belege nur noch Top-Veranstaltungen.
+			</p>
+		</a>
+	</div>
+
+	<div class="front pull_right">
+		<a href="/Bewerten" >
+			<img src="{{url_for('static', filename='img/writing_no_circle.png')}}" alt="main">
+			<p>
+				Schreib eine Bewertung von einer Lehrveranstaltung, die du belegt hast.
+			</p>
+		</a>
+	</div>
+
+	<div class="clear"></div>
+
+	<h2>Beta</h2>
+	<div>Nur eine kleine Auswahl an Hochschulen können bewertet werden.</div>
+	<div>Du willst, dass deine Hochschulen als nächstes verfügbar wird?</div>
+	<div>Schreib uns eine Mail: <a class="blue" href="mailto:hallo@gutelehre.de">hallo@gutelehre.de</a></div>
+	<br>
+	<div>Auch über Feedback freuen wir uns immer. :)</div>
+</div>
+
+
+{% endblock %}

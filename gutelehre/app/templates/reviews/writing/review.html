@@ -1,0 +1,43 @@
+{% extends "reviews/writing/base_writing.html" %}
+
+{% import "helpers/forms.html" as forms %}
+
+{% block review_writing %}
+{{super()}}
+
+
+<div class="review">
+	<h3 class="red">{{uni.name}}</h3>
+	<form action="{{url_for('reviews.writing_choose_uni')}}" method="POST">
+		<a href="#" onclick="$(this).closest('form').submit();">
+			Andere Hochschule auswählen
+		</a>
+	</form>
+
+	<h3 class="red">{{course.name}}</h3>
+	<a href="{{ url_for('reviews.writing_choose_course', uni_id=uni.id) }}">andere Lehrveranstaltung auswählen</a>	
+</div>
+
+<form id='bewerten' action=
+{% if course.id == 0 %}
+	"{{url_for('reviews.writing_review', uni_id=uni.id, course_id=course.id, new_course=course.name) }}"
+{% else %}
+	"{{url_for('reviews.writing_review', uni_id=uni.id, course_id=course.id) }}"
+{% endif %}
+ method="POST">
+ 
+	<dt>Gesamtbewertung der Lehrveranstaltung</dt>
+	<dd> <div id='star'></div> </dd>
+
+	{{ forms.render(form) }}
+
+	<div id="count" class="pull_right"></div>
+
+	<div class="text_center clear">
+		<button type="Submit">BEWERTEN</button> 		
+	</div>
+
+
+</form>
+
+{% endblock review_writing %}

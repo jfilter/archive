@@ -1,0 +1,408 @@
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
+
+/*LAYOUT*/
+
+body {
+	font-family: 'Sorts Mill Goudy', serif;
+	background-color: white;
+	color: #424242;
+	font-size: 100%;
+}
+
+input, textarea, button {
+	font-family: 'Sorts Mill Goudy', serif;
+	line-height: normal;
+}
+
+#outer {
+	width: 760px;
+	margin: 3em auto;
+	line-height: normal;
+	color: #424242;
+	min-height: 600px;
+	background-color: white;
+}
+
+nav {
+	width: 760px;
+	margin: 0 auto;
+}
+
+header {
+	text-align: center;
+	background-color: white;
+	width: 100%;
+	box-shadow: 0 0.1em 0.1em #D8D8D8;
+	position: fixed;
+  top: 0;
+  left: 0;
+}
+
+nav .links {
+	padding: 1em;
+}
+
+nav li img {
+	height: 3em;
+}
+
+#privacy h2{
+	font-size: 2em;
+	margin-top: 1em;
+	margin-bottom: 0.1em;
+}
+
+#privacy {
+	text-align: left;
+}
+
+.flashes {
+	background-color: #C6E4F7;
+	text-align: center;
+	font-size: 2em;
+	line-height: 2em;
+	color: white;
+	margin: 2em 0;
+}
+
+#branding {
+	font-weight: bold;
+	font-size: 2em;
+	position: relative;
+	top: 0.25em;
+}
+
+h1, h2 {
+	font-family: 'Sorts Mill Goudy', serif;
+	color: #1A4F78;
+}
+
+h1 {
+	font-size: 5em;
+	line-height: 1em;
+	margin: 1em 0 1em 0;
+}
+
+h1 img {
+	height: 1em;
+}
+
+h2 {
+	font-size: 3em;
+	margin-bottom: 0.333em;
+}
+
+h3 {
+	font-size: 2em;
+}
+
+footer {
+	text-align: center;
+	background-color: white;
+	box-shadow: 0 -0.1em 0.1em #D8D8D8;
+	color: #C6E4F7;
+}
+
+footer div {
+	display: inline-block;
+}
+
+footer div div {
+	text-align: center;
+	padding: 2em 1em;
+}
+
+#content {
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: #424242;
+}
+
+a:hover {
+	color: #EC6133;
+}
+
+.pull_left {
+	float: left;
+}
+
+.pull_right {
+	float: right;
+}
+
+.center{
+	margin: auto o;
+}
+
+.text_center {
+	text-align: center;
+}
+
+.text_left {
+	text-align: left;
+}
+
+.clear{
+	clear: both;
+}
+
+.red {
+	color: #EC6133;
+}
+
+.blue {
+	color: #1A4F78;
+}
+
+.light_blue {
+	color: #C6E4F7;
+}
+
+.white {
+	color: white;
+}
+
+.black {
+	color: black;
+}
+
+/*INDEX*/
+
+.front {
+	width: 45%;
+	margin-top: 5em;
+	text-align: center;
+}
+
+.front p {
+	margin-top: 1em;
+	margin-bottom: 5em;
+}
+
+.front img {
+	width: 10em;
+}
+
+.front_img {
+	margin-top: 1em;
+	width: 10em;
+}
+
+.subtitle {
+	width: 100%;
+	text-align: center;
+	margin: 0 auto;
+	font-family: 'Sorts Mill Goudy', serif;
+	font-size: 1.5em;
+}
+
+/*READING*/
+
+#bewerten textarea {
+	width: 100%;
+	height: 20em; 
+	resize: vertical;
+	line-height: 1.5em;
+	font-size: 100%;
+	text-align: left;
+	border: 0.1em solid #C6E4F7;
+	color: #424242;
+}
+
+#bewerten {
+	text-align: left;
+	line-height: 1.5em;
+	font-size: 100%;
+}
+
+#bewerten input[type=text]{
+	width: 100%;
+	line-height: 1.5em;
+	font-size: 100%;
+	color: #424242;
+	border: 0.1em solid #C6E4F7;
+}
+
+#bewerten select {
+	line-height: 1.5em;
+	font-size: 100%;
+}
+
+#bewerten dd {
+	margin-bottom: 3em;
+}
+
+.review {
+	margin-bottom: 3em;
+}
+
+.review form {
+	margin-bottom: 3em;
+}
+
+#count {
+	min-height: 3em;
+}
+
+button {
+	background-color: #1A4F78;
+	color: #C6E4F7;
+	font-size: 1.5em;
+	padding: 0.25em 0.5em 0 0.5em;
+	border: 0.1em solid #1A4F78;
+	text-align: center;
+	margin: 1em;
+
+	-webkit-border-radius: 0.2em;
+	-moz-border-radius: 0.2em;
+	border-radius: 0.2em;
+}
+
+button:hover {
+	background-color: #C6E4F7;
+	color: #1A4F78;
+}
+
+
+#new_course {
+	margin-bottom: 3em;
+}
+
+.link_like:hover {
+	cursor: pointer;
+	color: #EC6133;
+}
+
+#add_new_course {
+	visibility: hidden;
+}
+
+#add_new_course input {
+	width: 100%;
+	line-height: 1.5em;
+	font-size: 100%;
+	margin: 0.5em 0;
+	text-align: center;
+}
+
+/* READING */
+
+.borders {
+	min-height: 0.2em;
+	margin: 2em auto 2em auto;
+	border-top: 0.1em solid #C6E4F7;
+	width: 100%
+}
+
+.text {
+	text-align: left;
+}
+
+.text .date {
+	color: grey;
+	float: right;
+}
+
+.text .title {
+	float: left;
+	font-weight: bold;
+}
+
+.text a:hover {
+	color: #EC6133;
+}
+
+.text .rating {
+	padding-left: 1em;
+	float: left;
+}
+
+.text .pre_text {
+	padding-top: 1em;
+	white-space: pre-wrap;
+}
+
+.review_title {
+	line-height: 1.5em;
+	margin-bottom: 1em;
+	font-size: 3.5em;
+}
+
+#bewerten textarea {
+	margin-top: 2em;
+}
+
+
+
+@media (max-width: 480px){
+  nav, #outer {
+    width: 100%;
+  	min-height: 0;
+  }
+  .front_img{
+  	display: none;
+  }
+
+ 	.rep_no_float {
+  	float: none;
+  }
+
+  header {
+		position: relative;
+  	top: 0;
+  	left: 0;
+  }
+
+  h1 {
+  	font-size: 2em;
+  }
+
+  h2 {
+  	font-size: 1.7em;
+  }
+
+  h3 {
+  	font-size: 1.35m;
+  }
+
+  .review_title {
+  	font-size: 1.7em;
+  }
+
+  .subtitle {
+  	font-size: 1em;
+  }
+
+  footer div div {
+		text-align: center;
+		padding: 1em 0.5em;
+	}
+
+	body {
+		padding: 0 1em;
+	}
+
+	.front img {
+		width: 30%;
+	}
+}
+
+@media (max-width: 760px){
+  nav, #outer {
+    width: 100%;
+  }
+
+ 	.rep_no_float {
+  	float: none;
+  }
+
+  header {
+		position: relative;
+	  top: 0;
+  	left: 0;
+  }
+}
