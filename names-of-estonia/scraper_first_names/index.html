@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Title Page</title>
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<h1 class="text-center">Hello World</h1>
+
+		<!-- jQuery -->
+		<script src="//code.jquery.com/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script src="https://apis.google.com/js/api.js"></script>
+ 		<script type="text/javascript">
+
+	 		DISCOVER_DOCS = ["https://sheets.googleapis.com/$discovery/rest?version=v4"];
+	 		SCOPES = "https://www.googleapis.com/auth/spreadsheets";
+	 		API_KEY = "AIzaSyAWzi-_jpGo_HTg4kO7XTGAo5n1KOGh9zU";
+	 		SHEET_ID = "1Yfi5uwjwMXJWtAj-H5wYlcBVNNesa6pS_A0x5ht6Y_w";
+	 		CLIENT_ID = "421563827388-1j7e1f2lrhr60dg0794vfjs22fdh8k77.apps.googleusercontent.com";
+
+	 		function getData(){
+	 		  console.log('getting data');
+	 		  gapi.client.sheets.spreadsheets.values.get({
+	 		    spreadsheetId: SHEET_ID,
+	 		    range: 'Sheet1!A:B',
+	 		  }).then(function(response) {
+	 		  	console.log(response);
+	 		});
+	 		}
+
+	 		function append() {
+	 			gapi.client.sheets.spreadsheets.values.append({
+	 				spreadsheetId: SHEET_ID,
+	 				range: 'Sheet1!D2:D20000',
+	 				values: [[99]],
+	 				valueInputOption: 'RAW'
+	 			}).then(function(response) { console.log(response) });
+	 		};
+
+	 		function updateSigninStatus(isSignedIn) {
+	 			if (isSignedIn) append();
+	 		}
+
+	 		function start() { 
+	 		  console.log('started');
+	 		  gapi.load('client:auth2', function() {
+	 		              console.log('loaded');
+	 		              gapi.client.init({
+	 		               discoveryDocs: DISCOVER_DOCS,
+	 		               scope: SCOPES,
+	 		               apiKey: API_KEY,
+	 		               clientId: CLIENT_ID
+	 		              }).then(function(){
+	 		              	gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
+
+	 		              	updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
+
+	 		              	gapi.auth2.getAuthInstance().signIn();
+	 		              });
+	 		  });
+	 		};
+
+	 		start();
+ 			
+ 		</script>
+	</body>
+</html>

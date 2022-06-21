@@ -1,0 +1,135 @@
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../fonts/worksans/WorkSans-Regular.woff2') format('woff2'),
+  url('../fonts/worksans/WorkSans-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/lato/Lato-Regular.woff2') format('woff2'),
+  url('../fonts/lato/Lato-Regular.woff') format('woff');
+}
+
+$primary-color: #c5e7ed;
+$secondary-color: #000;
+
+body {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+}
+
+article {
+  text-align: left;
+}
+
+.page-header {
+  font-family: 'Work Sans', serif;
+}
+
+td:nth-child(1) {
+  text-align: left;
+  width: 5rem;
+
+  @media(max-width:767px) {
+    width: 3rem;
+  }
+}
+
+td:nth-child(2) {
+  text-align: left;
+  width: 5rem;
+
+  @media(max-width:767px) {
+    text-align: cetner;
+    width: 3rem;
+  }
+}
+
+td:nth-child(3) {
+  text-align: left;
+
+  @media(max-width:767px) {
+    width: 7rem;
+  }
+}
+
+td:nth-child(4) {
+  text-align: right;
+  width: 5rem;
+}
+
+td:nth-child(5) {
+  padding-left: 1.5rem;
+}
+
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+input[type='text'] {
+  border: 1px solid #eee;
+  text-align: center;
+  width: 100%;
+
+  &:focus {
+    border: 1px solid $primary-color;
+    box-shadow: 0 0 10px $primary-color;
+    outline: none;
+  }
+}
+
+input[type='checkbox'] {
+  display: none;
+
+  & + label:before {
+    border: 1px solid $secondary-color;
+    content: '\00a0';
+    display: inline-block;
+    font: 16px/1em sans-serif;
+    height: 16px;
+    margin: 0 .25em 0 0;
+    padding: 0;
+    vertical-align: top;
+    width: 16px;
+  }
+}
+
+input[type='checkbox']:checked + label:before {
+  background: $primary-color;
+  color: $secondary-color;
+  content: '\2713';
+  text-align: center;
+}
+
+label {
+  font-weight: normal;
+}
+
+span + span {
+  margin-left: 1em;
+}
+
+#up {
+  margin-bottom: 1.5rem;
+  visibility: hidden;
+}
+
+#down {
+  margin-top: 1.5rem;
+}
+
+.fat {
+  font-weight: bold;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+
+  &:active,
+  &:hover,
+  &:visited {
+    color: inherit;
+  }
+}
